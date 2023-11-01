@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Age Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Age Calculator</h1>
+    <form>
+      <label for="birthdate">Enter your birthdate:</label>
+      <small>Use the format shown below</small>
+      <input type="text" id="birthdate" name="birthdate" placeholder="MM/DD/YYYY" required>
+      <div class="button-group">
+        <button type="submit" class="submit">CALCULATE</button>
+        <button type="reset" class="reset">RESET</button>
+      </div>
+    </form>
+    <p id="age"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
