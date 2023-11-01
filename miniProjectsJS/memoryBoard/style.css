@@ -1,0 +1,42 @@
+body {
+  text-align: center;
+  background-color: bisque;
+  margin: 5%;
+}
+
+img {
+  display: block; /* necessary in order to center image within parent container, .memorypic) */
+  max-height: 550px;
+}
+
+.grid {
+  /*border-style: solid;*/
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 30px;
+}
+
+.memory {
+  /*text-align: center; ** Not needed for contained text, parent <body> has attribute */
+  /*border-style: solid;*/
+}
+
+.heading {
+  /*border-style: solid;*/
+  font-family: Roboto, sans-serif;
+  font-weight: 200;
+  background-color: orange;
+}
+
+.caption {}
+
+.memorypic {
+  /*box-shadow: 5px 5px;*/
+  /*border-style: solid;*/
+  /*display: block; **not needed, parent <img> is block-level w/ CSS */
+  max-width: 100%;
+  filter: drop-shadow(10px 10px 10px gray);
+  margin: 10% auto; /*centers image containers, (and BL images) within their columns*/
+}
+
+#mem_ {}
