@@ -127,7 +127,7 @@ const pauseSong = () => {
 
 
 
-// HANDLING AUTOMATIC PLAYBACK OF NEXT SONG WHEN PRIOR SONG FINISHES
+// HANDLING AUTOMATIC PLAYBACK OF NEXT SONG. USES PLAYSONG FUNCTION^
 const playNextSong = () => {
   if (userData?.currentSong === null) {
     playSong(userData?.songs[0].id);
@@ -147,7 +147,7 @@ const playNextSong = () => {
 
 
 
-
+// HANDLES SELECTION OF PREVIOUS SONG. USES PLAYSONG FUNCTION^
 const playPreviousSong = () =>{
    if (userData?.currentSong === null) return;
    else {
@@ -162,7 +162,7 @@ const playPreviousSong = () =>{
 
 
 
-
+// HANDLES SHUFFLE BUTTON, DOES NOT AFFECT PLAYBACK?
 const shuffle = () => {
   userData?.songs.sort(() => Math.random() - 0.5);
   userData.currentSong = null;
@@ -182,7 +182,7 @@ const shuffle = () => {
 
 
 
-
+// HANDLES DELETING OF SONGS FROM QUEUE. IF ALL SONGS ARE REMOVED, A NEW BUTTON IS CREATED FOR RESTORING THE PLAYLIST
 const deleteSong = (id) => {
   if (userData?.currentSong?.id === id) {
     userData.currentSong = null;
@@ -226,7 +226,7 @@ const deleteSong = (id) => {
 
 
 
-
+// THE UI FOR THE MUSIC PLAYER FUNCTIONS, HANDLES
 const setPlayerDisplay = () => {
   const playingSong = document.getElementById("player-song-title");
   const songArtist = document.getElementById("player-song-artist");
@@ -241,7 +241,7 @@ const setPlayerDisplay = () => {
 
 
 
-
+// HANDLES ACCESSBILITY FOR PLAYLIST NAVIGATION
 const highlightCurrentSong = () => {
   const playlistSongElements = document.querySelectorAll(".playlist-song");
   const songToHighlight = document.getElementById(
@@ -258,7 +258,7 @@ const highlightCurrentSong = () => {
 
 
 
-
+// ???
 const renderSongs = (array) => {
   const songsHTML = array
     .map((song)=> {
@@ -283,7 +283,7 @@ const renderSongs = (array) => {
 
 
 
-
+// HANDLES ACCESSBILITY FOR WHEN THE SONG IS BEING PLAYED
 const setPlayButtonAccessibleText = () => {
   const song = userData?.currentSong || userData?.songs[0];
 
@@ -299,7 +299,7 @@ const setPlayButtonAccessibleText = () => {
 
 
 
-
+// 
 const getCurrentSongIndex = () => userData?.songs.indexOf(userData?.currentSong);
 
 playButton.addEventListener("click", () => {
